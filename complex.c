@@ -5,3 +5,9 @@ double getNorm(const ComplexNumber number) {
 	double y = number.imag;
 	return x*x + y*y;
 }
+
+double getAbs(const ComplexNumber number ) {
+	double x = number.real;
+	double y = number.imag;
+	return sqrt(x*x + y*y);
+}
