@@ -11,13 +11,8 @@ double getAbs(const ComplexNumber number ) {
 }
 
 ComplexNumber mult(const ComplexNumber first, const ComplexNumber second) {
-	double x1 = first.real;
-	double y1 = first.imag;
-	double x2 = second.real;
-	double y2 = second.imag;
-	ComplexNumber res;
-	res.real = x1*x2 - y1*y2;
-	res.imag = x1*y2 + y1*x2;
-	return res;
+	double real = first.real*second.real - first.imag*second.imag;
+	double imag = first.real*second.imag + first.imag*second.real;
+	return (ComplexNumber) {real, imag};
 }
 
