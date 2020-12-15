@@ -1,4 +1,4 @@
-#ifndef COMPLEX_H
+﻿#ifndef COMPLEX_H
 #define COMPLEX_H
 #define PI 3.14159265358979323846
 #include <stdbool.h>
@@ -47,7 +47,9 @@ double getArg(const ComplexNumber number);
 /**
  * @return Возвращает норму number.
 */
-double getNorm(const ComplexNumber number);
+double getNorm(const ComplexNumber number){
+	return (pow(number.real, 2) + pow(number.imag, 2));
+}
 
 
 /**
