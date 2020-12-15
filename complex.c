@@ -6,6 +6,6 @@ double getNorm(const ComplexNumber number) {
 	return x * x + y * y;
 }
 
-double getAbs(const ComplexNumber number ) {
+double getAbs(const ComplexNumber number) {
 	return sqrt(getNorm(number));
 }
