@@ -18,9 +18,10 @@ ComplexNumber mult(const ComplexNumber first, const ComplexNumber second) {
 }
 
 static ComplexNumber multInverse(const ComplexNumber number) {
-	double real = number.real / getNorm(number);
-	double imag = -number.imag / getNorm(number);
-	return (ComplexNumber) { real, imag };
+	double norm = getNorm(number);
+	double real = number.real / norm;
+	double imag = number.imag / norm;
+	return (ComplexNumber) { real, -imag };
 }
 
 ComplexNumber divide(const ComplexNumber dividend, const ComplexNumber divisor) {
