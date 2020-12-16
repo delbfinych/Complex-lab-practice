@@ -17,3 +17,14 @@ ComplexNumber mult(const ComplexNumber first, const ComplexNumber second) {
 	return (ComplexNumber) { real, imag };
 }
 
+static ComplexNumber multInverse(const ComplexNumber number) {
+	double norm = getNorm(number);
+	double real = number.real / norm;
+	double imag = number.imag / norm;
+	return (ComplexNumber) { real, -imag };
+}
+
+ComplexNumber divide(const ComplexNumber dividend, const ComplexNumber divisor) {
+	ComplexNumber inversed = multInverse(divisor);
+	return (ComplexNumber) mult(inversed, dividend);
+}
