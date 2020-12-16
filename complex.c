@@ -25,6 +25,6 @@ static ComplexNumber multInverse(const ComplexNumber number) {
 }
 
 ComplexNumber divide(const ComplexNumber dividend, const ComplexNumber divisor) {
-	ComplexNumber inverse = multInverse(divisor);
-	return (ComplexNumber) mult(inverse, dividend);
+	ComplexNumber inversed = multInverse(divisor);
+	return (ComplexNumber) mult(inversed, dividend);
 }
