@@ -17,3 +17,8 @@ ComplexNumber mult(const ComplexNumber first, const ComplexNumber second) {
 	return (ComplexNumber) { real, imag };
 }
 
+static ComplexNumber multInverse(const ComplexNumber number) {
+	double real = number.real / getNorm(number);
+	double imag = -number.imag / getNorm(number);
+	return (ComplexNumber) { real, imag };
+}
