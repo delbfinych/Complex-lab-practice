@@ -28,3 +28,9 @@ ComplexNumber divide(const ComplexNumber dividend, const ComplexNumber divisor) 
 	ComplexNumber inversed = multInverse(divisor);
 	return (ComplexNumber) mult(inversed, dividend);
 }
+
+ComplexNumber complexPow(const ComplexNumber basis, int exponent) {
+	double abs = pow(getAbs(basis), exponent);
+	double arg = getArg(basis) * exponent;
+	return (ComplexNumber) { abs * cos(arg), abs * sin(arg) };
+}	
