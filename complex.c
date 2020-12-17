@@ -40,3 +40,9 @@ ComplexNumber sum(const ComplexNumber first, const ComplexNumber second) {
 	double imag = first.imag + second.imag;
 	return (ComplexNumber) { real, imag };
 }
+
+ComplexNumber subtract(const ComplexNumber minuend, const ComplexNumber subtrahend) {
+	double real = first.real - second.real;
+	double imag = first.imag - second.imag;
+	return (ComplexNumber) { real, imag };
+}
