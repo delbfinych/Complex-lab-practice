@@ -34,3 +34,9 @@ ComplexNumber complexPow(const ComplexNumber basis, int exponent) {
 	double arg = getArg(basis) * exponent;
 	return (ComplexNumber) { abs * cos(arg), abs * sin(arg) };
 }	
+
+ComplexNumber sum(const ComplexNumber first, const ComplexNumber second) {
+	double real = first.real + second.real;
+	double imag = first.imag + second.imag;
+	return (ComplexNumber) { real, imag };
+}
